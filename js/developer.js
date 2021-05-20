@@ -79,3 +79,21 @@ $(window).scroll(function() {
         $('.auction-car-bid-details').removeClass("fixed-now");
     }
 })
+
+function progress(timeleft, timetotal, $element) {
+    var barWidth = $element.parent('.auction-bid-time,.auction-car-bid-details').width();
+    var progressBarWidth =  timeleft * barWidth / timetotal;
+    var progressBarWidth = barWidth - progressBarWidth;
+    $element.animate({ width: progressBarWidth}, 100);
+    $element.parent().find('.time-left').html(timeleft);
+    if(timeleft > 0) {
+        setTimeout(function() {
+            progress(timeleft - 1, timetotal, $element);
+        }, 1000);
+    }
+    else{
+        $element.parent().find('.auction-time').html("Auction Completed");
+    }
+};
+
+progress(120, 120, $('.time-slider'));
