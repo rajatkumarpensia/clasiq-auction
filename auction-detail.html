@@ -24,7 +24,7 @@
                 <div class="menu">
                     <span class="close-menu only-mobile"></span>
                     <ul class="menu-wrapper list-unstyled mb-0">
-                        <li class="menu-item level-1 position-relative"><a href="live-auctions.html" class="menu-link text-uppercase">View Live Auction</a>
+                        <li class="menu-item level-1 position-relative"><a href="javascript:void(0);" class="menu-link text-uppercase">View Live Auction</a>
                             <ul class="level-2 list-unstyled position-absolute">
                                 <li class="d-block"><a href="live-auctions.html" class="menu-link text-uppercase">Live auctions</a></li>
                                 <li class="d-block"><a href="completed-auctions.html" class="menu-link text-uppercase">Completed auctions</a></li>
@@ -210,36 +210,77 @@
                     </div>
                 </div>
                 <div class="tab-pane fade show" id="interior_content" role="tabpanel" aria-labelledby="interior_content">
-                    <div class="gallery">
+                    <div class="gallery"  uk-grid uk-lightbox="animation: slide">
                         <div class="gallery-img-wrap">
-                            <div class="gallery-img">
-                                <img class="img-fluid" src="images/car-1.png" alt="car">
-                            </div>
-                        </div>
-                        <div class="gallery-img-wrap">
-                            <div class="gallery-img">
-                                <img class="img-fluid" src="images/car-2.png" alt="car">
-                            </div>
-                        </div>
-                        <div class="gallery-img-wrap">
-                            <div class="gallery-img">
-                                <img class="img-fluid" src="images/car-3.png" alt="car">
-                            </div>
-                        </div>
-                        <div class="gallery-img-wrap">
-                            <div class="gallery-img">
-                                <img class="img-fluid" src="images/car-4.png" alt="car">
-                            </div>
-                        </div>
-                        <div class="gallery-img-wrap">
-                            <div class="gallery-img">
-                                <img class="img-fluid" src="images/car-5.png" alt="car">
+                            <div class="gallery-img position-relative">
+                                <a class=" uk-inline" href="images/car-1.png" data-caption="Caption 1">
+                                    <img class="img-fluid" src="images/car-1.png" alt="car">
+                                </a>
                             </div>
                         </div>
                         <div class="gallery-img-wrap">
                             <div class="gallery-img position-relative">
-                                <img class="img-fluid" src="images/car-6.png" alt="car">
-                                <span class="overlay overlay-text"><span class="">view all images</span></span>
+                                <a class=" uk-inline" href="images/car-2.png" data-caption="Caption 2">
+                                    <img class="img-fluid" src="images/car-2.png" alt="car">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-img-wrap">
+                            <div class="gallery-img position-relative">
+                                <a class=" uk-inline" href="images/car-3.png" data-caption="Caption 3">
+                                    <img class="img-fluid" src="images/car-3.png" alt="car">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-img-wrap">
+                            <div class="gallery-img position-relative">
+                                <a class=" uk-inline" href="images/car-4.png" data-caption="Caption 4">
+                                    <img class="img-fluid" src="images/car-4.png" alt="car">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-img-wrap">
+                            <div class="gallery-img position-relative">
+                                <a class=" uk-inline" href="images/car-5.png" data-caption="Caption 5">
+                                    <img class="img-fluid" src="images/car-5.png" alt="car">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-img-wrap">
+                            <div class="gallery-img position-relative">
+                                <a href="images/car-6.png"  data-caption="Caption 6">
+                                    <img class="img-fluid" src="images/car-6.png" alt="car">
+                                </a>
+                                <span class="overlay overlay-text view-all-gallery"><span class="">view all images</span></span>
+                            </div>
+                        </div>
+                        <div class="gallery-img-wrap d-none">
+                            <div class="gallery-img position-relative">
+                                <a class=" uk-inline" href="images/auction-car-1.png" data-caption="Caption 7">
+                                    <img class="img-fluid" src="images/car-5.png" alt="car">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-img-wrap d-none">
+                            <div class="gallery-img position-relative">
+                                <a class=" uk-inline" href="images/car-5.png" data-caption="Caption 8">
+                                    <img class="img-fluid" src="images/car-5.png" alt="car">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-img-wrap d-none">
+                            <div class="gallery-img position-relative">
+                                <a class=" uk-inline" href="images/car-5.png" data-caption="Caption 9">
+                                    <img class="img-fluid" src="images/car-5.png" alt="car">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-img-wrap d-none">
+                            <div class="gallery-img position-relative">
+                                <a class=" uk-inline" href="images/car-5.png" data-caption="Caption 10">
+                                    <img class="img-fluid" src="images/car-5.png" alt="car">
+                                </a>
+                                <span class="overlay overlay-text hide-all-gallery"><span class="">Hide images</span></span>
                             </div>
                         </div>
                     </div>
@@ -850,7 +891,7 @@
         </div>
     </footer>
     <!-- footer end -->
-    <!-- login-modal -->
+   <!-- login-modal -->
     <div class="popup-modal" id="login_popup">
         <span class="close-popup"></span>
         <div class="popup-content">
@@ -880,7 +921,7 @@
                                 <a href="javascript:void(0);" class="text-black font-bold forgot-password hover-theme">Forgot our password?</a>
                             </div>
                             <a href="javascript:void(0);" class="btn theme-btn text-uppercase">Submit</a>
-                            
+                            <span class="only-mobile mt-3 open-popup-modal" data-target="signup_popup">Create a new account. <span class="text-theme">SIGN UP</span></span>
                         </form>
                     </div>
                 </div>
@@ -936,7 +977,7 @@
                                   </div>
                             </div>
                             <a href="javascript:void(0);" class="btn theme-btn text-uppercase">Sign Up</a>
-                            
+                            <span class="only-mobile mt-3 open-popup-modal" data-target="login_popup">Already have a account? <span class="text-theme">SIGN IN</span></span>
                         </form>
                     </div>
                 </div>

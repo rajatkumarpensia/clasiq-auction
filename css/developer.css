@@ -578,7 +578,7 @@ a,span{
     position: absolute;
     font-size: 18px;
     right:0;
-    top:-75px;
+    top:-45px;
 }
 .popup-content{
     width: 1200px;
@@ -1540,7 +1540,7 @@ body.half-gray{
         display: none;
     }
     .popup-content .form-wrap{
-        max-height:500px;
+        max-height:95vh;
         overflow-y:auto ;
     }
     .close-popup.close-btn{
@@ -1660,6 +1660,9 @@ body.half-gray{
         background-size: 2px 6px;
         transform: translateX(-50%);
         z-index: 9;
+    }
+    .popup-content .heading-3.mb-5{
+        margin-bottom:15px !important;
     }
 }
 @media(max-width:560px){
