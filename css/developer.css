@@ -1231,11 +1231,11 @@ body.half-gray{
     max-width: 500px;
     margin:50px auto 100px;
 }
-.faq-tabs .nav-tabs,.seasons-tabs .nav-tabs{
+.faq-tabs .nav-tabs,.seasons-tabs .nav-tabs,.valuation-tabs .nav-tabs{
     border-bottom: 0;
     justify-content: center;
 }
-.faq-tabs .nav-tabs .nav-link,.seasons-tabs .nav-tabs .nav-links{
+.faq-tabs .nav-tabs .nav-link,.seasons-tabs .nav-tabs .nav-links,.valuation-tabs .nav-tabs .nav-links{
     margin:10px 15px;
     border-radius: 10px;
     border:1px solid #eee;
@@ -1243,11 +1243,16 @@ body.half-gray{
     padding: 20px;
     font-weight: 600;
 }
-.seasons-tabs .nav-tabs .nav-link{
+.seasons-tabs .nav-tabs .nav-link,
+.valuation-tabs .nav-tabs .nav-link{
     background-color: transparent;
     border:0;
 }
-.seasons-tabs .nav-tabs .nav-link span{
+.valuation-tabs .nav-tabs .nav-link{
+    margin:0 25px;
+}
+.seasons-tabs .nav-tabs .nav-link span,
+.valuation-tabs .nav-tabs .nav-link span{
     width:55px;
     height: 55px;
     display: block;
@@ -1259,11 +1264,13 @@ body.half-gray{
     line-height: 52px;
     font-weight: 600;
 }
-.seasons-tabs .nav-tabs .nav-link.active span{
+.seasons-tabs .nav-tabs .nav-link.active span,
+.valuation-tabs .nav-tabs .nav-link.active span{
     background-color: rgba(250, 160, 1,0.1);
     border-color: rgba(250, 160, 1,1);
 }
-.seasons-tabs .nav-tabs .nav-link:hover{
+.seasons-tabs .nav-tabs .nav-link:hover
+.valuation-tabs .nav-tabs .nav-link:hover{
     color: #FAA001;
 }
 .faq-tabs .nav-tabs .nav-link img{
@@ -1326,6 +1333,66 @@ body.half-gray{
 .clasiq-content-detail p,.clasiq-content-detail h4{
     margin:20px 0;
 }
+.valuation-form .form-wrap{
+    max-width: 800px;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    border:1px solid #ccc;
+    margin:40px auto;
+}
+.upload-file-wrap{
+    background-color: rgba(250, 160, 1,0.1);
+    border:1px dashed #faa001;
+    border-radius: 10px;
+    padding:70px 10px;
+    cursor: pointer;
+}
+.car-photo-form input[type="file"]{
+    position: absolute;
+    width:calc(100% - 30px);
+    height:100%;
+    z-index: 999;
+    opacity: 0;
+    cursor: pointer;
+}
+.upload-file-label{
+    color: #aaa;
+    font-size: 14px;
+    margin:15px 0;
+}
+.car-photo-form .upload-file{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.car-photo-form .upload-file .upload-icon{
+    width:60px;
+}
+.car-photo-form .upload-file .upload-progress-bar{
+    width:calc(100% - 75px);
+    height: 5px;
+    border-radius: 8px;
+    background-color: #aaa;
+    position: relative;
+    /* overflow: hidden; */
+}
+.car-photo-form .upload-file .upload-progress-bar span.upload-fill-bar{
+    display: block;
+    background-color: #C1DBD0;
+    height: 100%;
+    border-radius: 8px;
+}
+.uploaded-per{
+    color: #aaa;
+    font-size: 14px;
+    position: absolute;
+    right:0;
+    top:-25px;
+}
+.valuation-tabs{
+    /* pointer-events: none; */
+}
 /* media query */
 @media(min-width:992px){
     .menu-wrapper .level-1:hover .level-2{
@@ -1366,8 +1433,20 @@ body.half-gray{
     }
 }
 @media(max-width:1200px){
-    .search-wrapper .search input.header-search{
+    .search-wrapper .search input.header-search,
+    .search-wrapper .search .mobile-search-input{
         display: none;
+    }
+    .search-wrapper .search .mobile-search-input.show,
+    .search-wrapper .search .mobile-search-input.show input.header-search{
+        display: block;
+    }
+    .search-wrapper .search .mobile-search-input.show{
+        position: absolute;
+        border:1px solid #ccc;
+        border-radius: 25px;
+        left:-200px;
+        top:30px;
     }
     .search-wrapper .search .fa-search{
         position: relative;

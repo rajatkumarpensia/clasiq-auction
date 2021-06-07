@@ -63,6 +63,18 @@ $(document).ready(function(){
         $(".gallery .view-all-gallery").removeClass('d-none');
         $(".gallery-img-wrap").addClass('d-none');
     })
+
+    // This will fire each time the window is resized:
+    if($(window).width() <= 1200) {
+        // if larger or equal
+        $('input.header-search').wrap("<div class='mobile-search-input'></div>");
+        $(".search-wrapper  .fa-search").click(function(){
+            $(".mobile-search-input").toggleClass("show");
+        })
+    } else {
+        // if smaller
+        $('input.header-search').unwrap("<div class='mobile-search-input'></div>");
+    }
     
 });
 
@@ -83,7 +95,7 @@ $(window).scroll(function() {
 function progress(timeleft, timetotal, $element) {
     var barWidth = $element.parent('.auction-bid-time,.auction-car-bid-details').width();
     var progressBarWidth =  timeleft * barWidth / timetotal;
-    var progressBarWidth = barWidth - progressBarWidth;
+    // var progressBarWidth = barWidth - progressBarWidth;
     $element.animate({ width: progressBarWidth}, 100);
     $element.parent().find('.time-left').html(timeleft);
     if(timeleft > 0) {
